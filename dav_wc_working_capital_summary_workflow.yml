@@ -147,7 +147,7 @@ Resources:
       Connections: 
         Connections: 
           - !Ref GlueConnection
-      NumberOfWorkers: 2
+      NumberOfWorkers: 3
       WorkerType: G.1X
       DefaultArguments:  
         "--job-bookmark-option": "job-bookmark-disable"
