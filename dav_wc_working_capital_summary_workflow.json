@@ -1,8 +1,18 @@
 {
-  "Parameters" : {
-    "GlueWorkflowName" : "dav_wc_working_capital_summary_workflow_cfn",
-    "GlueRoleName" : "AWSGlueServiceRole-test",
-    "GlueConnection" : "devconnection",
-    "BucketName" : "rajkumarasohancloudformationbucket"
+  "Parameters": {
+    "GlueWorkflowName": "dav_wc_working_capital_summary_workflow",
+    "GlueRoleName": "AWSGlueServiceRole-test",
+    "GlueConnection": "devconnection",
+    "BucketName": "rajkumarasohancloudformationbucket"
+  },
+  "StackPolicy": {
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": "Update:*",
+        "Principal": "*",
+        "Resource": "*"
+      }
+    ]
   }
 }
