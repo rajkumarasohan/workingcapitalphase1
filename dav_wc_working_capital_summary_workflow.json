@@ -1,0 +1,18 @@
+{
+  "Parameters": {
+    "GlueWorkflowName": "dav_wc_working_capital_summary_workflow_cfn",
+    "GlueTrigger1": "dav_wc_check_summary_refresh_trigger_cfn",
+    "GlueTrigger2": "dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY_trigger_cfn",
+    "GlueTrigger3": "dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY_trigger_cfn",
+    "GlueTrigger4": "dav_wc_load_onprem_to_s3_EXT_HFM312_DATA_trigger_cfn",
+    "GlueTrigger5": "dav_wc_load_s3_to_aurora_EXT_HFM312_DATA_trigger_cfn",
+    "GlueJob1": "dav_wc_check_summary_refresh",
+    "GlueJob2": "dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY",
+    "GlueJob3": "dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY",
+    "GlueJob4": "dav_wc_load_onprem_to_s3_EXT_HFM312_DATA",
+    "GlueJob5": "dav_wc_load_s3_to_aurora_EXT_HFM312_DATA",
+    "GlueRoleName": "AWSGlueServiceRole-test",
+    "GlueConnection": "testconnection",
+    "BucketName": "workingcapitalphase1stgbucket"
+  }
+}

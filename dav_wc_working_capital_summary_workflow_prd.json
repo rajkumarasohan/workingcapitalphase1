@@ -1,0 +1,18 @@
+{
+  "Parameters": {
+    "GlueWorkflowName": "dav_wc_working_capital_summary_workflow_cfn_prd",
+    "GlueTrigger1": "dav_wc_check_summary_refresh_trigger_cfn_prd",
+    "GlueTrigger2": "dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY_trigger_cfn_prd",
+    "GlueTrigger3": "dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY_trigger_cfn_prd",
+    "GlueTrigger4": "dav_wc_load_onprem_to_s3_EXT_HFM312_DATA_trigger_cfn_prd",
+    "GlueTrigger5": "dav_wc_load_s3_to_aurora_EXT_HFM312_DATA_trigger_cfn_prd",
+    "GlueJob1": "dav_wc_check_summary_refresh_prd",
+    "GlueJob2": "dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY_prd",
+    "GlueJob3": "dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY_prd",
+    "GlueJob4": "dav_wc_load_onprem_to_s3_EXT_HFM312_DATA_prd",
+    "GlueJob5": "dav_wc_load_s3_to_aurora_EXT_HFM312_DATA_prd",
+    "GlueRoleName": "AWSGlueServiceRole-prod",
+    "GlueConnection": "prodconnection",
+    "BucketName": "workingcapitalphase1prdbucket"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "Parameters": {
-    "GlueWorkflowName": "dav_wc_working_capital_summary_workflow_cfn",
-    "GlueRoleName": "AWSGlueServiceRole-test",
-    "GlueConnection": "testconnection",
-    "BucketName": "workingcapitalphase1stgbucket"
-  }
-}
