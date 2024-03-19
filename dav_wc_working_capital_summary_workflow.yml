@@ -218,8 +218,8 @@ Resources:
         "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_check_summary_refresh.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
-        "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
-        "--extra-jars": !Sub s3://${BucketName}/jdbc/jar_files.jar
+        "--extra-py-files": !Sub s3://${BucketName}/libraries/python_files.whl
+        "--extra-jars": !Sub s3://${BucketName}/libraries/jar_files.jar
 
   loadonpremtos3HFMLEGALENTITY:
     Type: AWS::Glue::Job
@@ -241,7 +241,7 @@ Resources:
         "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
-        "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
+        "--extra-py-files": !Sub s3://${BucketName}/libraries/python_files.whl
 
   loads3toauroraHFMLEGALENTITY:
     Type: AWS::Glue::Job
@@ -263,7 +263,7 @@ Resources:
         "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
-        "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
+        "--extra-py-files": !Sub s3://${BucketName}/libraries/python_files.whl
 
   loadonpremtos3EXTHFM312DATA:
     Type: AWS::Glue::Job
@@ -285,7 +285,7 @@ Resources:
         "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_onprem_to_s3_EXT_HFM312_DATA.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
-        "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
+        "--extra-py-files": !Sub s3://${BucketName}/libraries/python_files.whl
 
   loads3toauroraEXTHFM312DATA:
     Type: AWS::Glue::Job
@@ -307,4 +307,4 @@ Resources:
         "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_s3_to_aurora_EXT_HFM312_DATA.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
-        "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
+        "--extra-py-files": !Sub s3://${BucketName}/libraries/python_files.whl
