@@ -1,0 +1,8 @@
+{
+  "Parameters": {
+    "GlueWorkflowName": "dav_wc_working_capital_summary_workflow_cfn_prd",
+    "GlueRoleName": "AWSGlueServiceRole-prod",
+    "GlueConnection": "prodconnection",
+    "BucketName": "workingcapitalphase1prdbucket"
+  }
+}
