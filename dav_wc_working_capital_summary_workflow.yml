@@ -203,7 +203,7 @@ Resources:
       Command:
         Name: glueetl
         PythonVersion: "3"
-        ScriptLocation: !Sub s3://${BucketName}/scripts/${GlueJob1}.py
+        ScriptLocation: !Sub s3://${BucketName}/scripts/dav_wc_check_summary_refresh.py
       GlueVersion: "4.0"
       ExecutionProperty:
         MaxConcurrentRuns: 1
@@ -215,7 +215,7 @@ Resources:
       DefaultArguments:  
         "--job-bookmark-option": "job-bookmark-disable"
         "--bucket_name": !Ref BucketName
-        "--config_file_path": !Sub s3://${BucketName}/config/${GlueJob1}.json
+        "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_check_summary_refresh.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
         "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
@@ -230,7 +230,7 @@ Resources:
       Command:
         Name: pythonshell
         PythonVersion: "3.9"
-        ScriptLocation: !Sub s3://${BucketName}/scripts/${GlueJob2}.py
+        ScriptLocation: !Sub s3://${BucketName}/scripts/dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY.py
       ExecutionProperty:
         MaxConcurrentRuns: 1
       Connections: 
@@ -238,7 +238,7 @@ Resources:
           - !Ref GlueConnection
       DefaultArguments:  
         "--bucket_name": !Ref BucketName
-        "--config_file_path": !Sub s3://${BucketName}/config/${GlueJob2}.json
+        "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_onprem_to_s3_HFM_LEGAL_ENTITY.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
         "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
@@ -252,7 +252,7 @@ Resources:
       Command:
         Name: pythonshell
         PythonVersion: "3.9"
-        ScriptLocation: !Sub s3://${BucketName}/scripts/${GlueJob3}.py
+        ScriptLocation: !Sub s3://${BucketName}/scripts/dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY.py
       ExecutionProperty:
         MaxConcurrentRuns: 1
       Connections: 
@@ -260,7 +260,7 @@ Resources:
           - !Ref GlueConnection
       DefaultArguments:  
         "--bucket_name": !Ref BucketName
-        "--config_file_path": !Sub s3://${BucketName}/config/${GlueJob3}.json
+        "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_s3_to_aurora_HFM_LEGAL_ENTITY.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
         "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
@@ -274,7 +274,7 @@ Resources:
       Command:
         Name: pythonshell
         PythonVersion: "3.9"
-        ScriptLocation: !Sub s3://${BucketName}/scripts/${GlueJob4}.py
+        ScriptLocation: !Sub s3://${BucketName}/scripts/dav_wc_load_onprem_to_s3_EXT_HFM312_DATA.py
       ExecutionProperty:
         MaxConcurrentRuns: 1
       Connections: 
@@ -282,7 +282,7 @@ Resources:
           - !Ref GlueConnection
       DefaultArguments:  
         "--bucket_name": !Ref BucketName
-        "--config_file_path": !Sub s3://${BucketName}/config/${GlueJob4}.json
+        "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_onprem_to_s3_EXT_HFM312_DATA.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
         "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
@@ -296,7 +296,7 @@ Resources:
       Command:
         Name: pythonshell
         PythonVersion: "3.9"
-        ScriptLocation: !Sub s3://${BucketName}/scripts/${GlueJob5}.py
+        ScriptLocation: !Sub s3://${BucketName}/scripts/dav_wc_load_s3_to_aurora_EXT_HFM312_DATA.py
       ExecutionProperty:
         MaxConcurrentRuns: 1
       Connections: 
@@ -304,7 +304,7 @@ Resources:
           - !Ref GlueConnection
       DefaultArguments:  
         "--bucket_name": !Ref BucketName
-        "--config_file_path": !Sub s3://${BucketName}/config/${GlueJob5}.json
+        "--config_file_path": !Sub s3://${BucketName}/config/dav_wc_load_s3_to_aurora_EXT_HFM312_DATA.json
         "--TempDir": !Sub s3://${BucketName}/temporary/
         "--class": "GlueApp"
         "--extra-py-files": !Sub s3://${BucketName}/scripts/python_files.whl
